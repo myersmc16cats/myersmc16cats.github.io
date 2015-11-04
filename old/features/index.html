@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>CATS</title>
+
+  	<link rel="shortcut icon" href="favicon.png">
+    
+  
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+    <style>
+  
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+  background-color: white;
+  color: #D7DADB;
+  margin: 0;
+}
+
+h1 {
+  color: #333;
+}
+
+.content {
+  margin-top: 20px;
+  padding: 0 10px;
+}
+
+
+/*__MENU STYLES__*/
+#menu-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index:5000;
+}
+
+#menu-bar {
+  display: block;
+  width: 100%;
+  height: 10px;
+  background-color: #5682c6;
+}
+
+#menu-tab {
+  background-color: #5682c6;
+  cursor: pointer;
+  float: right;
+  padding: 5px 10px;
+  border-radius: 0 0 5px 5px;
+  color:white;
+}
+
+#menu-nav {
+  display: none;
+  padding: 5px 10px;
+  background-color: #5682c6;
+  color: white;
+}
+
+#menu-nav a {
+  text-decoration:none;
+  color:white;
+}
+
+#menu-nav ul {
+  list-style: none;
+  margin: 20px 0 30px;
+  padding: 0;
+}
+
+#menu-nav ul li{
+  padding: 10px;
+  border-bottom: 1px solid #426599;
+  cursor: pointer;
+  text-align: center;
+}
+
+#menu-nav ul li:first-child{
+  border-top: 1px solid #426599;
+}
+
+#menu-nav ul li:hover{
+  background-color: #426599;
+}
+
+
+
+
+
+
+.display {
+		display:block;
+	}
+	
+	.display.shrink {
+		display:none;
+	}
+	
+	.nodisplay {
+		display:none;
+	}
+	
+	.nodisplay.shrink {
+		display:block;
+	}
+	
+	.nodisplaywidthxs {
+    	display:none;		
+    }
+    
+    .displaywidthxs {
+    	display:block;		
+    }
+	
+	@media (max-width: 767px) {
+    .displaywidthxs {
+    	display:none;		
+    }
+	}
+
+
+@media (max-width: 767px) {
+    .nodisplaywidthxs {
+    	display:block;
+    }
+	}
+	
+	.displaywidth {
+    	display:block;		
+    }
+    
+    .nodisplaywidth {
+    	display:none;		
+    }
+	
+	@media (max-width: 991px) {
+    .displaywidth {
+    	display:none;		
+    }
+	}
+	
+	@media (max-width: 991px) {
+    .nodisplaywidth {
+    	display:block;
+    }
+	}
+	
+	.displaywidthxs {
+    	display:block;		
+    }
+    
+    .nodisplaywidthxs {
+    	display:none;		
+    }
+	
+	@media (max-width: 767px) {
+    .displaywidthxs {
+    	display:none;		
+    }
+	}
+	
+	@media (max-width: 767px) {
+    .displaywidthxs2 {
+    	display:none;		
+    }
+	}
+	
+	@media (max-width: 767px) {
+    .nodisplaywidthxs {
+    	display:block;
+    }
+	}
+
+
+
+	.mainbck {
+		position:absolute;
+		top:0px;
+		left:0px;
+		z-index:100;
+	}
+	
+	.mainbck img {
+		z-index:100;
+		width:100%;
+		min-width:1200px;
+	}
+	
+	.mainbckxs {
+		position:absolute;
+		top:0px;
+		left:0px;
+		z-index:100;
+	}
+	
+	.mainbckxs img {
+		z-index:100;
+		width:100%;
+	}
+
+	.logo img {
+		height:40px;
+		z-index:101;
+		position:absolute;
+		margin-left:20px;
+		margin-top:15px;
+	}
+	
+	.freetrial img {
+		height:32px;
+		z-index:101;
+		position:absolute;
+		right:15px;
+		margin-top:15px;
+	}
+	
+	.freetrial2 img {
+		height:32px;
+		margin-top:15px;
+		margin-right:15px;
+		float:right;
+	}
+	
+	.requestdemo img {
+		height:32px;
+		z-index:101;
+		position:absolute;
+		right:20px;
+		margin-top:15px;
+	}
+	
+	.requestdemo2 img {
+		height:32px;
+		margin-top:15px;
+		margin-right:20px;
+		float:right;
+	}
+	
+	.topmenu {
+		font-size:.7em;
+	}
+	
+	.topmenu a {
+		color:white;
+		text-decoration:none;
+	}
+	
+	.topmenu a:hover {
+		color:#d5d5d5;
+	}
+	
+	.login {
+		font-size:1.6em;
+		z-index:102;
+		position:absolute;
+		right:135px;
+		margin-top:19px;
+		color:white;
+	}
+	
+	.support {
+		font-size:1.6em;
+		z-index:102;
+		position:absolute;
+		right:200px;
+		margin-top:19px;
+		color:white;
+	}
+	
+	.pricing {
+		font-size:1.6em;
+		z-index:102;
+		position:absolute;
+		right:280px;
+		margin-top:19px;
+		color:white;
+	}
+	
+	.features {
+		font-size:1.6em;
+		z-index:102;
+		position:absolute;
+		right:355px;
+		margin-top:19px;
+		color:white;
+	}
+	
+	.freetrialmain {
+		z-index:300;
+		position:relative;
+		top:395px;
+		margin-left:95px;
+	}
+	
+	.freetrialmain img {
+		height:50px;
+	}
+	
+	@media (max-width: 767px) {
+    .freetrialmain {
+		z-index:300;
+		width:100%;
+		position:relative;
+		margin-left:auto;
+		margin-right:auto;
+		display:block;
+		top:380px;
+	}
+	}
+	
+	@media (max-width: 767px) {
+    .freetrialmain img {
+		height:50px;
+		margin-left:auto;
+		margin-right:auto;
+		display:block;
+	}
+	}
+	
+	.maintext {
+		z-index:300;
+		color:white;
+		font-size:3em;
+		position:relative;
+		top:350px;
+		margin-left:25px;
+	}
+	
+	.txt1 {
+		font-size:1.8em;
+		font-weight:bold;
+	}
+	
+	.txt2 {
+		font-size:.65em;
+		font-weight:bold;
+		position:relative;
+		top:0px;
+		left:70px;
+	}
+	
+	.txt3 {
+		font-size:1.2em;
+		font-weight:bold;
+		position:relative;
+		top:15px;
+		left:40px;
+	}
+	
+	.txt4 {
+		font-size:1.2em;
+		font-weight:bold;
+		position:relative;
+		top:30px;
+		left:50px;
+	}
+	
+	.txt5 {
+		font-size:.55em;
+		font-weight:bold;
+		position:relative;
+		top:30px;
+		left:70px;
+	}
+	
+	@media (max-width: 767px) {
+    .maintext {
+		z-index:300;
+		color:white;
+		font-size:1.5em;
+		position:relative;
+		top:120px;
+		margin-left:5px;
+	}
+	}
+	
+	@media (max-width: 767px) {
+    .txt1 {
+		font-size:1.8em;
+		font-weight:bold;
+	}
+	}
+	
+	@media (max-width: 767px) {
+    .txt2 {
+		font-size:.75em;
+		font-weight:bold;
+		position:relative;
+		top:-4px;
+		left:20px;
+	}
+	}
+	
+	@media (max-width: 767px) {
+   	.txt3 {
+		font-size:1.2em;
+		font-weight:bold;
+		position:relative;
+		top:-5px;
+		left:10px;
+	}
+	}
+	
+	@media (max-width: 767px) {
+   	.txt4 {
+		font-size:1.2em;
+		font-weight:bold;
+		position:relative;
+		top:-5px;
+		left:15px;
+	}
+	}
+	
+	@media (max-width: 767px) {
+   	.txt5 {
+		font-size:.75em;
+		font-weight:bold;
+		position:relative;
+		top:-10px;
+		left:30px;
+	}
+	}
+	
+	.whiteheader {
+		background-color:white;
+		width:100%;
+		position:relative;
+		z-index:500;
+		padding:25px;
+	}
+	
+	.graybox {
+		background-color:#f7f5f3;
+		width:100%;
+		position:relative;
+		z-index:500;
+		padding-bottom:50px;
+		padding-top:50px;
+		}
+	
+	.graybox img {
+		width:100%;
+	}
+	
+	@media (max-width: 991px) {
+    .graybox {
+		background-color:#f7f5f3;
+		width:100%;
+		position:relative;
+		z-index:500;
+		padding-bottom:50px;
+		padding-top:25px;
+		}
+	}
+	
+	.whitebox {
+		background-color:white;
+		width:100%;
+		position:relative;
+		z-index:500;
+		padding-bottom:50px;
+		padding-top:50px;
+		}
+	
+	.whitebox img {
+		width:100%;
+	}
+	
+	@media (max-width: 991px) {
+    .whitebox {
+		background-color:white;
+		width:100%;
+		position:relative;
+		z-index:500;
+		padding-bottom:50px;
+		padding-top:25px;
+		}
+	}
+	
+	.push {
+		margin-bottom:40px;
+	}
+	
+	@media (max-width: 767px) {
+    .push {
+    margin-bottom:330px;
+    }
+	}
+	
+	.jobposting {
+		font-size:1.4em;
+		font-weight:none;
+		color:#777;
+	}
+	
+	.jobposting h2 {
+		color:#555;
+		padding-top:0px;
+	}
+	
+	@media (min-width: 1200px) {
+    .jobposting h2 {
+		padding-top:70px;
+	}
+	}
+	
+	.space {
+		margin-bottom:20px;
+	}
+	
+	.needtext {
+		font-size:4em;
+		text-align:center;
+		font-weight:bold;
+		color:#444;
+		margin-bottom:10px;
+		margin-top:10px;
+	}
+	
+	@media (max-width: 767px) {
+    .needtext {
+		font-size:3em;
+	}
+	}
+	
+	.bluefooter {
+		width:100%;
+		background-color:#5682c6;
+		position:relative;
+		bottom:0px;
+		z-index:501;
+	}
+	
+	.bluefooter a {
+		text-decoration:none;
+		color:white;
+	}
+	
+	.bluefooter a:hover {
+		text-decoration:none;
+		color:#f6921e;
+	}
+	
+	.socialicons {
+		float:right;
+		margin-right:0px;
+	}
+	
+	.socialicons img {
+		width:40px;
+		float:left;
+		margin-right:5px;
+		margin-left:5px;
+		margin-top:20px;
+	}
+	
+	@media (max-width: 991px) {
+    .socialicons img {
+    	width:30px;
+    	margin-right:3px;
+    	margin-left:2px;
+    }
+	}
+	
+	@media (max-width: 767px) {
+    .socialicons img {
+    	width:40px;
+    	margin-right:3px;
+    	margin-left:2px;
+    }
+	}
+	
+	.whitetext {
+		color:white;
+	}
+	
+	.contact {
+		background-color:none;
+	}
+	
+	.copyright {
+		margin-bottom:10px;
+	}
+	
+	.phone {
+		float:left;
+		margin-right:10px;
+	}
+	
+	.phone img {
+		height:20px;
+	}
+	
+	.email {
+		float:left;
+		margin-right:10px;
+	}
+	
+	.email img {
+		height:12px;
+	}
+	
+	.phonenumber {
+		float:left;
+		font-size:1.2em;
+		position:relative;
+		top:-2px;
+	}
+	
+	.emailaddress {
+		float:left;
+		font-size:1.2em;
+		position:relative;
+		top:-2px;
+	}
+	
+	.allphone {
+		width:100%;
+		height:20px;
+	}
+	
+	.allemail {
+		width:100%;
+		height:20px;
+		position:relative;
+		top:-12px;
+	}
+	
+	.contact {
+		height:100px;
+		width:100%;
+	}
+	
+	.about {
+		height:150px;
+		width:100%;
+	}
+	
+	.legal {
+		height:150px;
+		width:100%;
+	}
+	
+	.bgimg {
+    background-image: url('assets/features9.jpg');
+    background-size: 100%;
+    background-position: top right;
+    min-width:1200px;
+    min-height:500px;
+   
+}
+
+	.bgimg2 {
+    background-image: url('assets/features7.jpg');
+    background-size: 100%;
+    background-position: bottom right;
+   	min-height:450px;
+}
+
+.featuresmenu {
+		position:absolute;
+		width:100%;
+		height:140px;
+		background-color: white;
+		z-index:501;
+		top:360px;
+		text-align:center;
+		
+		opacity:.9;
+	}
+	
+	@media (max-width: 767px) {
+    .featuresmenu {
+		position:absolute;
+		width:100%;
+		height:612px;
+		background-color: white;
+		z-index:501;
+		top:70px;
+	}
+	}
+	
+	.box1 {
+		width:12.5%;
+		height:50%;
+		background-color:white;
+		float:left;
+		padding:10px 15px;
+		text-align:center;
+    
+	}
+	
+	@media (max-width: 767px) {
+    .box1 {
+		width:50%;
+		height:12.5%;
+		background-color:white;
+		float:left;
+		padding:15px;
+		text-align:center;
+	}
+	}
+	
+	.box1:hover {
+		background-color:#e7e7e7;
+	}
+	
+	.featurelogo {
+		height:100%;
+		width:70px;
+		background-color:none;
+		float:left;
+	}
+	
+	
+	.featurelogo img {
+		width:65px;
+		padding-top:5px;
+	}
+	
+	@media (max-width: 767px) {
+    .featurelogo img {
+		width:65px;
+		padding-top:5px;
+	}
+	}
+	
+	.featurestext {
+		
+		line-height: 110%;
+		color:#545454;
+		font-size:1em;
+		padding:5px;
+		text-align:center;
+	}
+	
+	@media (max-width: 767px) {
+    .featurestext {
+		text-align:center;
+		line-height: 110%;
+		color:#545454;
+		font-size:1em;
+		padding:5px;
+	}
+	}
+	
+	.back-to-top {
+  background-color: rgba(246, 146, 30, 0.5);
+  bottom: 2em;
+  color: white;
+  display: none;
+  font-size: 12px;
+  height: 50px;
+  position: fixed;
+  z-index:999999999999999;
+  right: 1em;
+  text-align: center;
+  text-decoration: none;
+  width: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+}
+
+.back-to-top:hover {
+  background-color: rgba(246, 146, 30, .8);
+  color:white;
+}
+
+.back-to-top i {
+  padding: 0.45em;
+}
+  
+  	.glyphicon-menu-up {
+  		font-size:2.5em;
+  		margin-top:7px;
+  	}
+	
+	
+	.menuscroll {
+		width:100%;
+		height:60px;
+		background-color:white;
+		top:-80px;
+		position:fixed;
+		z-index:99999999999999999999999999999999999999999;
+		box-shadow: 0px 0px 10px 0px #999;
+		-webkit-transition: top .5s; /* Safari */
+   		transition: top .5s;
+   		font-size:.7em;
+	}
+	
+	.menuscroll a {
+		color:#545454;
+	}
+	
+	.menuscroll a:hover {
+		color:#f69212;
+		text-decoration:none;
+	}
+	
+	.menuscroll.shrink {
+		width:100%;
+		height:63px;
+		background-color:white;
+		top:0px;
+		position:fixed;
+		z-index:99999999999999999999999999999999999999999;
+		box-shadow: 0px 0px 10px 0px #999;
+	}
+	
+	.menuscroll.shrink a {
+		color:#545454;
+	}
+	
+	.menuscroll.shrink a:hover {
+		color:#f69212;
+		text-decoration:none;
+	}
+	
+	.colorcatslogo img {
+		height:40px;
+		margin-left:20px;
+		margin-top:11px;
+		float:left;
+	}
+	
+	
+	
+	
+    </style>
+    
+    
+    
+  </head>
+  <body>
+  
+  
+  <div class="nodisplaywidthxs">
+  <div id="menu-wrapper">
+  <div id="menu-bar"></div>
+  
+  <div id="menu-nav">
+    <ul>
+      <a href="index.html"><li>Home</li></a>
+      <a href="features.html"><li>Features</li></a>
+      <a href="pricing.html"><li>Pricing</li></a>
+      <a href="support.html"><li>Support</li></a>
+      <a href="https://freestone.catsone.com/index.php?m=home"><li>Login</li></a>
+      <a href="freetrial.html"><li>Free Trial</li></a>
+      <a href="#"><li>Request a Demo</li></a>
+    </ul>
+  </div>
+  
+  <div id="menu-tab" class="closed">Menu</div>
+</div>
+</div>
+
+	
+<div class="menuscroll displaywidthxs">
+  
+  		<div class="colorcatslogo"><a href=index.html><img src="assets/catscolorlogo.jpg"></a></div>
+  		<div class="login"><a href="https://freestone.catsone.com/index.php?m=home">Login</a></div>
+		<div class="support"><a href="support.html">Support</a></div>
+		<div class="pricing"><a href="pricing.html">Pricing</a></div>
+		<div class="features"><a href="features.html">Features</a></div>
+  		<div class="freetrial2"><a href="freetrial.html"><img src="assets/freetrial9.png" onmouseover="this.src='assets/freetrial11.png'" onmouseout="this.src='assets/freetrial9.png'"></a></div>
+  		
+  		
+ 		</div>
+
+<div class="bgimg displaywidthxs">
+    
+    <div class="topmenu displaywidthxs">
+	
+	<div class="login"><a href="https://freestone.catsone.com/index.php?m=home">Login</a></div>
+	<div class="support"><a href="support.html">Support</a></div>
+	<div class="pricing"><a href="pricing.html">Pricing</a></div>
+	<div class="features"><a href="features.html">Features</a></div>
+	
+	</div>
+    
+    <div class="logo"><a href="index.html"><img src="assets/clogo9.png"></a></div>
+    
+     <div class="freetrial displaywidthxs"><a href="freetrial.html"><img src="assets/freetrial9.png" onmouseover="this.src='assets/freetrial11.png'" onmouseout="this.src='assets/freetrial9.png'"></a></div>
+  	
+    
+</div>
+
+<div class="bgimg2 nodisplaywidthxs">
+    
+    
+    <div class="logo"><a href="index.html"><img src="assets/clogo9.png"></a></div>
+    
+     
+    
+</div>
+
+
+<a href="#" class="back-to-top" title="Back to Top">
+  <i class="fa fa-chevron-up fa-2x"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></i>
+</a>
+
+
+<div class="featuresmenu displaywidthxs">
+
+	<a href=""><div class="box1"><div class="featurestext">Customizable Workflow</div></div></a>
+	<a href=""><div class="box1"><div class="featurestext">Search Inside Resumes</div></div></a>
+	<a href=""><div class="box1"><div class="featurestext">Detailed Reports</div></div></a>
+	<a href=""><div class="box1"><div class="featurestext">Customizable Career Portal</div></div></a>
+	<a href=""><div class="box1"><div class="featurestext">Import & Parse Resume</div></div></a>
+	<a href=""><div class="box1"><div class="featurestext">Keyword Search</div></div></a>
+	<a href=""><div class="box1"><div class="featurestext">Post to Job Boards</div></div></a>
+	<a href=""><div class="box1"><div class="featurestext">Keep Data Organized</div></div></a>
+	<a href=""><div class="box1"><div class="featurestext">Chrome & Firefox Extension</div></div></a>
+	<a href=""><div class="box1"><div class="featurestext">Email Integration</div></div></a>
+	<a href=""><div class="box1"><div class="featurestext">Customizable Application</div></div></a>
+	<a href=""><div class="box1"><div class="featurestext">Send Mass Emails</div></div></a>
+	<a href=""><div class="box1"><div class="featurestext">Hiring Manager Access</div></div></a>
+	<a href=""><div class="box1"><div class="featurestext">Submit to Client</div></div></a>
+	<a href=""><div class="box1"><div class="featurestext">User Management</div></div></a>
+	<a href=""><div class="box1"><div class="featurestext">Secure Data Protection</div></div></a>
+	
+	
+</div>
+
+
+
+<div class="displaywidthxs"></div>
+	
+	<div class="whitebox">
+	
+	<div class="container">
+	
+					<div class="row">
+					
+                            <div class="col-md-4 col-sm-12">
+	
+							<div class="jobposting"><h2>Customizable Workflow</h2>Every company’s hiring needs are unique. Nearly everything in CATS can be customized to fit your process. Create custom statuses to keep track of every step in your hiring process. Customize CATS to match your exact hiring workflow.</div>
+							<div class="space"></div>
+							</div>
+							
+							<div class="col-md-8 col-sm-12">
+							
+							<img src="assets/jobposting2.jpg">
+							
+							</div>
+	
+	</div>
+	
+
+	</div>
+	
+	</div>
+  
+  
+  <div class="graybox displaywidth">
+	
+	<div class="container">
+	
+					<div class="row">
+					
+                            
+                            <div class="col-md-8 col-sm-12">
+							
+							<img src="assets/customizableworkflow2.jpg">
+							
+							</div>
+                            
+                            <div class="col-md-4 col-sm-12">
+	
+							<div class="jobposting"><h2>Search Inside Resume</h2>Every company’s hiring needs are unique. Nearly everything in CATS can be customized to fit your process. Create custom statuses to keep track of every step in your hiring process. Customize CATS to match your exact hiring workflow.</div>
+							<div class="space"></div>
+							</div>
+							
+							
+	
+	</div>
+	
+
+	</div>
+	
+	</div>
+	
+	
+	<div class="graybox nodisplaywidth">
+	
+	<div class="container">
+	
+					<div class="row">
+					
+                            <div class="col-md-4 col-sm-12">
+	
+							<div class="jobposting"><h2>Search Inside Resume</h2>Every company’s hiring needs are unique. Nearly everything in CATS can be customized to fit your process. Create custom statuses to keep track of every step in your hiring process. Customize CATS to match your exact hiring workflow.</div>
+							<div class="space"></div>
+							</div>
+							
+							<div class="col-md-8 col-sm-12">
+							
+							<img src="assets/customizableworkflow2.jpg">
+							
+							</div>
+	
+	</div>
+	
+
+	</div>
+	
+	</div>
+	
+ 	<div class="whitebox">
+	
+	<div class="container">
+	
+					<div class="row">
+					
+                            <div class="col-md-4 col-sm-12">
+	
+							<div class="jobposting"><h2>Detailed Reports</h2>Every company’s hiring needs are unique. Nearly everything in CATS can be customized to fit your process. Create custom statuses to keep track of every step in your hiring process. Customize CATS to match your exact hiring workflow.</div>
+							<div class="space"></div>
+							</div>
+							
+							<div class="col-md-8 col-sm-12">
+							
+							<img src="assets/searchinsideresume.jpg">
+							
+							</div>
+	
+	</div>
+	
+
+	</div>
+	
+	</div>
+	
+	
+	
+	<div class="graybox displaywidth">
+	
+	<div class="container">
+	
+					<div class="row">
+					
+                            
+                            <div class="col-md-8 col-sm-12">
+							
+							<img src="assets/customizableworkflow2.jpg">
+							
+							</div>
+                            
+                            <div class="col-md-4 col-sm-12">
+	
+							<div class="jobposting"><h2>Customizable Career Portal</h2>Every company’s hiring needs are unique. Nearly everything in CATS can be customized to fit your process. Create custom statuses to keep track of every step in your hiring process. Customize CATS to match your exact hiring workflow.</div>
+							<div class="space"></div>
+							</div>
+							
+							
+	
+	</div>
+	
+
+	</div>
+	
+	</div>
+	
+	
+	<div class="graybox nodisplaywidth">
+	
+	<div class="container">
+	
+					<div class="row">
+					
+                            <div class="col-md-4 col-sm-12">
+	
+							<div class="jobposting"><h2>Customizable Career Portal</h2>Every company’s hiring needs are unique. Nearly everything in CATS can be customized to fit your process. Create custom statuses to keep track of every step in your hiring process. Customize CATS to match your exact hiring workflow.</div>
+							<div class="space"></div>
+							</div>
+							
+							<div class="col-md-8 col-sm-12">
+							
+							<img src="assets/customizableworkflow2.jpg">
+							
+							</div>
+	
+	</div>
+	
+
+	</div>
+	
+	</div>
+	
+ 	<div class="whitebox">
+	
+	<div class="container">
+	
+					<div class="row">
+					
+                            <div class="col-md-4 col-sm-12">
+	
+							<div class="jobposting"><h2>Import & Parse Resume</h2>Every company’s hiring needs are unique. Nearly everything in CATS can be customized to fit your process. Create custom statuses to keep track of every step in your hiring process. Customize CATS to match your exact hiring workflow.</div>
+							<div class="space"></div>
+							</div>
+							
+							<div class="col-md-8 col-sm-12">
+							
+							<img src="assets/searchinsideresume.jpg">
+							
+							</div>
+	
+	</div>
+	
+
+	</div>
+	
+	</div>
+	
+	
+	<div class="graybox displaywidth">
+	
+	<div class="container">
+	
+					<div class="row">
+					
+                            
+                            <div class="col-md-8 col-sm-12">
+							
+							<img src="assets/customizableworkflow2.jpg">
+							
+							</div>
+                            
+                            <div class="col-md-4 col-sm-12">
+	
+							<div class="jobposting"><h2>Keyword Search</h2>Every company’s hiring needs are unique. Nearly everything in CATS can be customized to fit your process. Create custom statuses to keep track of every step in your hiring process. Customize CATS to match your exact hiring workflow.</div>
+							<div class="space"></div>
+							</div>
+							
+							
+	
+	</div>
+	
+
+	</div>
+	
+	</div>
+	
+	
+	<div class="graybox nodisplaywidth">
+	
+	<div class="container">
+	
+					<div class="row">
+					
+                            <div class="col-md-4 col-sm-12">
+	
+							<div class="jobposting"><h2>Keyword Search</h2>Every company’s hiring needs are unique. Nearly everything in CATS can be customized to fit your process. Create custom statuses to keep track of every step in your hiring process. Customize CATS to match your exact hiring workflow.</div>
+							<div class="space"></div>
+							</div>
+							
+							<div class="col-md-8 col-sm-12">
+							
+							<img src="assets/customizableworkflow2.jpg">
+							
+							</div>
+	
+	</div>
+	
+
+	</div>
+	
+	</div>
+	
+ 	<div class="whitebox">
+	
+	<div class="container">
+	
+					<div class="row">
+					
+                            <div class="col-md-4 col-sm-12">
+	
+							<div class="jobposting"><h2>Post to Job Boards</h2>Every company’s hiring needs are unique. Nearly everything in CATS can be customized to fit your process. Create custom statuses to keep track of every step in your hiring process. Customize CATS to match your exact hiring workflow.</div>
+							<div class="space"></div>
+							</div>
+							
+							<div class="col-md-8 col-sm-12">
+							
+							<img src="assets/searchinsideresume.jpg">
+							
+							</div>
+	
+	</div>
+	
+
+	</div>
+	
+	</div>
+	
+	
+	<div class="graybox displaywidth">
+	
+	<div class="container">
+	
+					<div class="row">
+					
+                            
+                            <div class="col-md-8 col-sm-12">
+							
+							<img src="assets/customizableworkflow2.jpg">
+							
+							</div>
+                            
+                            <div class="col-md-4 col-sm-12">
+	
+							<div class="jobposting"><h2>Keep Data Organized</h2>Every company’s hiring needs are unique. Nearly everything in CATS can be customized to fit your process. Create custom statuses to keep track of every step in your hiring process. Customize CATS to match your exact hiring workflow.</div>
+							<div class="space"></div>
+							</div>
+							
+							
+	
+	</div>
+	
+
+	</div>
+	
+	</div>
+	
+	
+	<div class="graybox nodisplaywidth">
+	
+	<div class="container">
+	
+					<div class="row">
+					
+                            <div class="col-md-4 col-sm-12">
+	
+							<div class="jobposting"><h2>Keep Data Organized</h2>Every company’s hiring needs are unique. Nearly everything in CATS can be customized to fit your process. Create custom statuses to keep track of every step in your hiring process. Customize CATS to match your exact hiring workflow.</div>
+							<div class="space"></div>
+							</div>
+							
+							<div class="col-md-8 col-sm-12">
+							
+							<img src="assets/customizableworkflow2.jpg">
+							
+							</div>
+	
+	</div>
+	
+
+	</div>
+	
+	</div>
+	
+ 	<div class="whitebox">
+	
+	<div class="container">
+	
+					<div class="row">
+					
+                            <div class="col-md-4 col-sm-12">
+	
+							<div class="jobposting"><h2>Chrome & Firefox Extension</h2>Every company’s hiring needs are unique. Nearly everything in CATS can be customized to fit your process. Create custom statuses to keep track of every step in your hiring process. Customize CATS to match your exact hiring workflow.</div>
+							<div class="space"></div>
+							</div>
+							
+							<div class="col-md-8 col-sm-12">
+							
+							<img src="assets/searchinsideresume.jpg">
+							
+							</div>
+	
+	</div>
+	
+
+	</div>
+	
+	</div>
+	
+	
+	<div class="graybox displaywidth">
+	
+	<div class="container">
+	
+					<div class="row">
+					
+                            
+                            <div class="col-md-8 col-sm-12">
+							
+							<img src="assets/customizableworkflow2.jpg">
+							
+							</div>
+                            
+                            <div class="col-md-4 col-sm-12">
+	
+							<div class="jobposting"><h2>Email Integration</h2>Every company’s hiring needs are unique. Nearly everything in CATS can be customized to fit your process. Create custom statuses to keep track of every step in your hiring process. Customize CATS to match your exact hiring workflow.</div>
+							<div class="space"></div>
+							</div>
+							
+							
+	
+	</div>
+	
+
+	</div>
+	
+	</div>
+	
+	
+	<div class="graybox nodisplaywidth">
+	
+	<div class="container">
+	
+					<div class="row">
+					
+                            <div class="col-md-4 col-sm-12">
+	
+							<div class="jobposting"><h2>Email Integration</h2>Every company’s hiring needs are unique. Nearly everything in CATS can be customized to fit your process. Create custom statuses to keep track of every step in your hiring process. Customize CATS to match your exact hiring workflow.</div>
+							<div class="space"></div>
+							</div>
+							
+							<div class="col-md-8 col-sm-12">
+							
+							<img src="assets/customizableworkflow2.jpg">
+							
+							</div>
+	
+	</div>
+	
+
+	</div>
+	
+	</div>
+	
+ 	<div class="whitebox">
+	
+	<div class="container">
+	
+					<div class="row">
+					
+                            <div class="col-md-4 col-sm-12">
+	
+							<div class="jobposting"><h2>Customizable Application</h2>Every company’s hiring needs are unique. Nearly everything in CATS can be customized to fit your process. Create custom statuses to keep track of every step in your hiring process. Customize CATS to match your exact hiring workflow.</div>
+							<div class="space"></div>
+							</div>
+							
+							<div class="col-md-8 col-sm-12">
+							
+							<img src="assets/searchinsideresume.jpg">
+							
+							</div>
+	
+	</div>
+	
+
+	</div>
+	
+	</div>
+	
+	
+	<div class="graybox displaywidth">
+	
+	<div class="container">
+	
+					<div class="row">
+					
+                            
+                            <div class="col-md-8 col-sm-12">
+							
+							<img src="assets/customizableworkflow2.jpg">
+							
+							</div>
+                            
+                            <div class="col-md-4 col-sm-12">
+	
+							<div class="jobposting"><h2>Send Mass Emails</h2>Every company’s hiring needs are unique. Nearly everything in CATS can be customized to fit your process. Create custom statuses to keep track of every step in your hiring process. Customize CATS to match your exact hiring workflow.</div>
+							<div class="space"></div>
+							</div>
+							
+							
+	
+	</div>
+	
+
+	</div>
+	
+	</div>
+	
+	
+	<div class="graybox nodisplaywidth">
+	
+	<div class="container">
+	
+					<div class="row">
+					
+                            <div class="col-md-4 col-sm-12">
+	
+							<div class="jobposting"><h2>Send Mass Emails</h2>Every company’s hiring needs are unique. Nearly everything in CATS can be customized to fit your process. Create custom statuses to keep track of every step in your hiring process. Customize CATS to match your exact hiring workflow.</div>
+							<div class="space"></div>
+							</div>
+							
+							<div class="col-md-8 col-sm-12">
+							
+							<img src="assets/customizableworkflow2.jpg">
+							
+							</div>
+	
+	</div>
+	
+
+	</div>
+	
+	</div>
+	
+ 	<div class="whitebox">
+	
+	<div class="container">
+	
+					<div class="row">
+					
+                            <div class="col-md-4 col-sm-12">
+	
+							<div class="jobposting"><h2>Hiring Access Manager</h2>Every company’s hiring needs are unique. Nearly everything in CATS can be customized to fit your process. Create custom statuses to keep track of every step in your hiring process. Customize CATS to match your exact hiring workflow.</div>
+							<div class="space"></div>
+							</div>
+							
+							<div class="col-md-8 col-sm-12">
+							
+							<img src="assets/searchinsideresume.jpg">
+							
+							</div>
+	
+	</div>
+	
+
+	</div>
+	
+	</div>
+	
+	<div class="graybox displaywidth">
+	
+	<div class="container">
+	
+					<div class="row">
+					
+                            
+                            <div class="col-md-8 col-sm-12">
+							
+							<img src="assets/customizableworkflow2.jpg">
+							
+							</div>
+                            
+                            <div class="col-md-4 col-sm-12">
+	
+							<div class="jobposting"><h2>Submit to Client</h2>Every company’s hiring needs are unique. Nearly everything in CATS can be customized to fit your process. Create custom statuses to keep track of every step in your hiring process. Customize CATS to match your exact hiring workflow.</div>
+							<div class="space"></div>
+							</div>
+							
+							
+	
+	</div>
+	
+
+	</div>
+	
+	</div>
+	
+	
+	<div class="graybox nodisplaywidth">
+	
+	<div class="container">
+	
+					<div class="row">
+					
+                            <div class="col-md-4 col-sm-12">
+	
+							<div class="jobposting"><h2>Submit to Client</h2>Every company’s hiring needs are unique. Nearly everything in CATS can be customized to fit your process. Create custom statuses to keep track of every step in your hiring process. Customize CATS to match your exact hiring workflow.</div>
+							<div class="space"></div>
+							</div>
+							
+							<div class="col-md-8 col-sm-12">
+							
+							<img src="assets/customizableworkflow2.jpg">
+							
+							</div>
+	
+	</div>
+	
+
+	</div>
+	
+	</div>
+	
+ 	<div class="whitebox">
+	
+	<div class="container">
+	
+					<div class="row">
+					
+                            <div class="col-md-4 col-sm-12">
+	
+							<div class="jobposting"><h2>User Management</h2>Every company’s hiring needs are unique. Nearly everything in CATS can be customized to fit your process. Create custom statuses to keep track of every step in your hiring process. Customize CATS to match your exact hiring workflow.</div>
+							<div class="space"></div>
+							</div>
+							
+							<div class="col-md-8 col-sm-12">
+							
+							<img src="assets/searchinsideresume.jpg">
+							
+							</div>
+	
+	</div>
+	
+
+	</div>
+	
+	</div>
+	
+	
+	<div class="graybox displaywidth">
+	
+	<div class="container">
+	
+					<div class="row">
+					
+                            
+                            <div class="col-md-8 col-sm-12">
+							
+							<img src="assets/customizableworkflow2.jpg">
+							
+							</div>
+                            
+                            <div class="col-md-4 col-sm-12">
+	
+							<div class="jobposting"><h2>Secure Data Protection</h2>Every company’s hiring needs are unique. Nearly everything in CATS can be customized to fit your process. Create custom statuses to keep track of every step in your hiring process. Customize CATS to match your exact hiring workflow.</div>
+							<div class="space"></div>
+							</div>
+							
+							
+	
+	</div>
+	
+
+	</div>
+	
+	</div>
+	
+	
+	<div class="graybox nodisplaywidth">
+	
+	<div class="container">
+	
+					<div class="row">
+					
+                            <div class="col-md-4 col-sm-12">
+	
+							<div class="jobposting"><h2>Secure Data Protection</h2>Every company’s hiring needs are unique. Nearly everything in CATS can be customized to fit your process. Create custom statuses to keep track of every step in your hiring process. Customize CATS to match your exact hiring workflow.</div>
+							<div class="space"></div>
+							</div>
+							
+							<div class="col-md-8 col-sm-12">
+							
+							<img src="assets/customizableworkflow2.jpg">
+							
+							</div>
+	
+	</div>
+	
+
+	</div>
+	
+	</div>
+	
+ 	
+	
+	
+	<div class="bluefooter displaywidthxs">
+  	
+  	<div class="container">
+  	
+  	<div class="row whitetext">
+  		  <div class="col-sm-4">
+  		  
+  		  	<h3>CONTACT US</h3>
+  		  	<div class="allphone"><div class="phone"><img src="assets/phone.png"></div><div class="phonenumber">952-373-4010</div></div>
+  		  	<br/>
+  		  	<div class="allemail"><a href="mailto:support@catsone.com"><div class="email"><img src="assets/email.png"></div><div class="emailaddress">support@catsone.com</div></a></div>
+  		  	
+  		</div>
+  			  
+  		<div class="col-sm-2">
+  			  
+  			<h3>ABOUT</h3>
+  			 
+  		  	<p><a href="ourcompany.html">Our Company</a></p>
+  		  	<p><a href="http://www.catsone.com/blog">Blog</a></p>
+  		  	<p><a href="careers.html">Careers</a></p>
+  			  
+  		</div>
+  			
+  		  <div class="col-sm-3">
+  		  
+  		  	<h3>LEGAL</h3>
+  		  	
+  		  	<p><a href="termsofservice.html">Terms of Service</a></p>
+  		  	<p><a href="websitetermsofuse.html">Website Terms of Use</a></p>
+  		  	<p><a href="privacypolicy.html">Privacy Policy</a></p>
+  		  	<p><a href="safeharborpolicy.html">Safe Harbor Policy</a></p>
+  		  	
+  		  </div>
+  		 	
+  		  <div class="col-sm-3">
+  		  <div class="socialicons">
+  		<a href="https://www.facebook.com/catsone" target="_blank"><img src="assets/facebook.jpg" onmouseover="this.src='assets/facebookhover.jpg'" onmouseout="this.src='assets/facebook.jpg'"></a>
+  		<a href="https://twitter.com/catsone/" target="_blank"><img src="assets/twitter.jpg" onmouseover="this.src='assets/twitterhover.jpg'" onmouseout="this.src='assets/twitter.jpg'"></a>
+  		<a href="https://www.linkedin.com/company/cats-software-inc?trk=fc_badge" target="_blank"><img src="assets/linkedin.jpg" onmouseover="this.src='assets/linkedinhover.jpg'" onmouseout="this.src='assets/linkedin.jpg'"></a>
+  		<a href="https://plus.google.com/u/0/107173691572817257962" target="_blank"><img src="assets/googleplus.jpg" onmouseover="this.src='assets/googleplushover.jpg'" onmouseout="this.src='assets/googleplus.jpg'"></a>
+  			</div>
+  			</div>
+ 	 </div>
+  	
+  	
+  	
+  	<div class="row whitetext">
+  	 <div class="col-sm-6">
+  			<div class="copyright">Copyright © 2015 CATS Software, Inc.</div>
+  		</div>
+  		<div class="col-sm-3"></div>
+  		<div class="col-sm-3"></div>
+
+  	</div>
+  	
+  	
+  	
+  	
+  	
+  	</div>
+  
+  </div>
+  
+	
+	<div class="bluefooter nodisplaywidthxs">
+  	
+  	<div class="container">
+  	
+  	<div class="row whitetext">
+  		  
+  		  <div class="col-xs-2"></div>
+  		  <div class="col-xs-8">
+  		  <div class="socialicons">
+  		<a href="https://www.facebook.com/catsone" target="_blank"><img src="assets/facebook.jpg" onmouseover="this.src='assets/facebookhover.jpg'" onmouseout="this.src='assets/facebook.jpg'"></a>
+  		<a href="https://twitter.com/catsone/" target="_blank"><img src="assets/twitter.jpg" onmouseover="this.src='assets/twitterhover.jpg'" onmouseout="this.src='assets/twitter.jpg'"></a>
+  		<a href="https://www.linkedin.com/company/cats-software-inc?trk=fc_badge" target="_blank"><img src="assets/linkedin.jpg" onmouseover="this.src='assets/linkedinhover.jpg'" onmouseout="this.src='assets/linkedin.jpg'"></a>
+  		<a href="https://plus.google.com/u/0/107173691572817257962" target="_blank"><img src="assets/googleplus.jpg" onmouseover="this.src='assets/googleplushover.jpg'" onmouseout="this.src='assets/googleplus.jpg'"></a>
+  			</div>
+  			</div>
+  			<div class="col-xs-2"></div>
+  		  
+  			  
+  		<div class="col-xs-5">
+  			  
+  			<h3>ABOUT</h3>
+  			 
+  		  	<p><a href="ourcompany.html">Our Company</a></p>
+  		  	<p><a href="http://www.catsone.com/blog">Blog</a></p>
+  		  	<p><a href="careers.html">Careers</a></p>
+  			  
+  		</div>
+  			
+  		  <div class="col-xs-7">
+  		  
+  		  	<h3>LEGAL</h3>
+  		  	
+  		  	<p><a href="termsofservice.html">Terms of Service</a></p>
+  		  	<p><a href="websitetermsofuse.html">Website Terms of Use</a></p>
+  		  	<p><a href="privacypolicy.html">Privacy Policy</a></p>
+  		  	<p><a href="safeharborpolicy.html">Safe Harbor Policy</a></p>
+  		  	
+  		  </div>
+  		 	
+  		  
+  			
+  			<div class="col-xs-12">
+  		  
+  		  	<h3>CONTACT US</h3>
+  		  	<div class="allphone"><div class="phone"><img src="assets/phone.png"></div><div class="phonenumber">952-373-4010</div></div>
+  		  	<br/>
+  		  	<div class="allemail"><a href="mailto:support@catsone.com"><div class="email"><img src="assets/email.png"></div><div class="emailaddress">support@catsone.com</div></a></div>
+  		  	
+  		</div>
+  			
+  			
+ 	 </div>
+  	
+  	
+  	
+  	<div class="row whitetext">
+  	 <div class="col-xs-12">
+  			<div class="copyright">Copyright © 2015 CATS Software, Inc.</div>
+  		</div>
+  		<div class="col-sm-3"></div>
+  		<div class="col-sm-3"></div>
+
+  	</div>
+  	
+  	
+  	
+  	
+  	
+  	</div>
+  
+  </div>
+	
+  
+  
+
+  
+	<script>
+
+
+// open top tab menu
+$(document).on('click', '#menu-tab', function () {
+	$('#menu-nav').slideToggle('slow');
+});
+
+
+$(window).scroll(function() {
+  if ($(document).scrollTop() > 45) {
+    $('.display').addClass('shrink');
+  } else {
+    $('.display').removeClass('shrink');
+  }
+});
+
+$(window).scroll(function() {
+  if ($(document).scrollTop() > 45) {
+    $('.nodisplay').addClass('shrink');
+  } else {
+    $('.nodisplay').removeClass('shrink');
+  }
+});
+
+$(window).scroll(function() {
+  if ($(document).scrollTop() > 25) {
+    $('.menuscroll').addClass('shrink');
+  } else {
+    $('.menuscroll').removeClass('shrink');
+  }
+});
+
+var offset = 220;
+var duration = 500;
+
+jQuery(window).scroll(function() {
+  if (jQuery(this).scrollTop() > offset) {
+    jQuery('.back-to-top').fadeIn(duration);
+  } else {
+    jQuery('.back-to-top').fadeOut(duration);
+  }
+});
+
+jQuery('.back-to-top').click(function(event) {
+  event.preventDefault();
+  jQuery('html, body').animate({
+    scrollTop: 0
+  }, duration);
+  return false;
+});
+
+
+
+	</script>
+    	
+    
+    
+    
+    
+  </body>
+</html>

@@ -1,0 +1,153 @@
+.bgimg {
+    background-image: url('/bck/bck27.jpg');
+    background-size: 100%;
+    background-position: center;
+    min-width: 900px;
+    min-height:150px;
+}
+
+	.bgimg2 {
+    background-image: url('/bck/bck28.jpg');
+    background-size: 100%;
+    background-position: center;
+   	min-height:150px;
+}
+
+  .supporttitle {
+    color:white;
+    font-size: 5em;
+    font-weight: bold;
+    position: absolute;
+    top:180px;
+    left:50px;
+  }
+
+  @media (max-width: 767px) {
+    .supporttitle {
+      color:white;
+      font-size: 3em;
+      font-weight: bold;
+      position: absolute;
+      top:180px;
+      left:30px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1;
+    }
+  }
+
+  .whitebox {
+    padding: 20px;
+    color:#555;
+  }
+
+  .whitebox h3 {
+    color:#545454;
+  }
+
+  .whitebox a:hover {
+    text-decoration: none;
+  }
+
+  .whitebox li {
+    padding:5px;
+  }
+
+  .whitebox h2 {
+    padding:0px 0px 10px 0px;
+    margin:0px;
+  }
+
+  .spacing {
+    padding:6px;
+  }
+
+  .bigblue {
+    color:#5682c6;
+    font-size: 1.5em;
+  }
+
+  .download {
+    background-color: #5682c6;
+    padding:10px 30px;
+    border-radius:10px;
+    transition: background-color 1s;
+    color:white;
+    font-size: 1.8em;
+    font-weight: bold;
+    border:none;
+    position: relative;
+    top:10px;
+  }
+
+  @media (max-width: 991px) {
+    .download {
+      background-color: #5682c6;
+      padding:10px 30px;
+      border-radius:10px;
+      transition: background-color 1s;
+      color:white;
+      font-size: 1.8em;
+      font-weight: bold;
+      border:none;
+      position: relative;
+      top:5px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .download {
+      background-color: #5682c6;
+      padding:8px 24px;
+      border-radius:8px;
+      transition: background-color 1s;
+      color:white;
+      font-size: 1.2em;
+      font-weight: bold;
+      border:none;
+      position: relative;
+      top:3px;
+    }
+  }
+
+
+  .downloadicon img {
+    width:80px;
+    margin-right: 20px;
+    margin-left: 0px;
+  }
+
+  @media (max-width: 767px) {
+    .downloadicon img {
+      width:80px;
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .downloadicon img {
+      width:60px;
+      margin-right: 10px;
+      margin-left: 0px;
+    }
+  }
+
+  .download:hover {
+    background-color: #426599;
+
+    transition: background-color 1s;
+
+  }
+
+  .download .glyphicon {
+    font-size: .9em;
+
+  }
+
+  @media (max-width: 991px) {
+    .download .glyphicon {
+      font-size: .9em;
+    }
+  }

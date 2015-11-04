@@ -1,0 +1,15 @@
+---
+layout: default
+title: Team
+---
+
+<h1>Team</h1>
+<p>Our employees:</p>
+
+<ul>
+    {% for person in site.data.team %}
+    <li>
+        <strong>{{ person.name }}</strong> - {{ person.title }}
+    </li>
+    {% endfor %}
+</ul>

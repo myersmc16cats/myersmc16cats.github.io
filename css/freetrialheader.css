@@ -1,0 +1,48 @@
+.bgimg {
+    background-image: url('/bck/bck23.jpg');
+    background-size: 100%;
+    background-position: center;
+    min-width:920px;
+    min-height:718px;
+
+}
+
+	.bgimg2 {
+    background-image: url('/bck/bck24.jpg');
+    background-size: 100%;
+   	min-height:860px;
+}
+
+
+.mainbck {
+  position:absolute;
+  top:0px;
+  left:0px;
+  z-index:100;
+}
+
+.mainbck img {
+  z-index:100;
+  width:100%;
+  min-width:1200px;
+}
+
+.mainbckxs {
+  position:absolute;
+  top:0px;
+  left:0px;
+  z-index:100;
+}
+
+.mainbckxs img {
+  z-index:100;
+  width:100%;
+}
+
+.logo img {
+  height:40px;
+  z-index:101;
+  position:absolute;
+  margin-left:20px;
+  margin-top:15px;
+}

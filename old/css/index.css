@@ -1,0 +1,12 @@
+.bgimg {
+    background-image: url('/assets/main10.jpg');
+    background-size: 100%;
+    min-width:1250px;
+    min-height:500px;
+}
+
+	.bgimg2 {
+    background-image: url('/assets/main8.jpg');
+    background-size: 100%;
+   	min-height:450px;
+}
