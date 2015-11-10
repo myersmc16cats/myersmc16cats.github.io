@@ -15,7 +15,7 @@
 }
 
 .cotmbck {
-    background-image: url('/bck/milkandhoney4.jpg');
+    background-image: url('/bck/milkandhoney8.jpg');
     background-size: 100%;
     background-position: center;
     min-width: 900px;
@@ -24,7 +24,7 @@
 
 @media (max-width: 767px) {
   .cotmbck {
-      background-image: url('/bck/milkandhoney5.jpg');
+      background-image: url('/bck/milkandhoney9.jpg');
       background-size: 100%;
       background-position: center;
       min-width: 0px;
@@ -381,4 +381,54 @@
   .pcotm button:hover {
     background-color: #426599;
     color:white;
+  }
+
+  .currentpage {
+    height:2px;
+    background-color: white;
+    width:75px;
+    position: absolute;
+    top:43px;
+    right:280px;
+  }
+
+
+  .currentpagetop {
+    height:2px;
+    background-color: #545454;
+    width:75px;
+    position: fixed;
+    top:-43px;
+    right:280px;
+    z-index: 100000000202020200202020202020202020202;
+    transition: top .5s;
+  }
+
+  .currentpagetop.shrink {
+    height:2px;
+    background-color: #545454;
+    width:75px;
+    position: fixed;
+    top:43px;
+    right:280px;
+    z-index: 100000000202020200202020202020202020202;
+    transition: top .5s;
+  }
+
+  @media (max-width: 767px) {
+    .currentpage {
+      display:none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .currentpagetop {
+      display:none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .currentpagetop.shrink {
+      display:none;
+    }
   }

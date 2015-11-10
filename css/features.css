@@ -464,3 +464,71 @@
       display:none;
     }
   }
+
+  .indvfeature1 {
+    color:#eeeeee;
+    position:absolute;
+    z-index:10000;
+    left:40px;
+    top:200px;
+    line-height: normal;
+    font-size: 5em;
+    font-weight:bold;
+  }
+
+  @media (max-width: 900px) {
+    .indvfeature1 {
+      color:#eeeeee;
+      position:absolute;
+      z-index:10000;
+      left:40px;
+      top:228px;
+      line-height: normal;
+      font-size: 3em;
+      font-weight:bold;
+    }
+	}
+
+  .indvfeature2 {
+    color:#eeeeee;
+    position:absolute;
+    z-index:10000;
+    left:40px;
+    top:135px;
+    line-height: normal;
+    font-size: 5em;
+    font-weight:bold;
+  }
+
+  @media (max-width: 900px) {
+    .indvfeature2 {
+      color:#eeeeee;
+      position:absolute;
+      z-index:10000;
+      left:40px;
+      top:187px;
+      line-height: normal;
+      font-size: 3em;
+      font-weight:bold;
+    }
+	}
+
+  .indvfeaturexs {
+    color:#eeeeee;
+    width:100%;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    position: absolute;
+    top:120px;
+    left:0px;
+    z-index: 1;
+  }
+
+  .blue {
+    color:#5682c6;
+  }
+
+  .orange {
+    color:#f69212;
+  }

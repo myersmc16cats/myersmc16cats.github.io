@@ -472,6 +472,7 @@
 
 .button3 button:hover {
   background-color: #cf7b0e;
+  text-decoration: none;
 }
 
 .button4 button {
@@ -518,4 +519,24 @@
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 40px;
+}
+
+.topbuttons {
+  position: absolute;
+  top: 400px;
+  left:50%;
+  margin-left: -218px;
+}
+
+.topbuttons a:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .topbuttons {
+    position: absolute;
+    top: 300px;
+    left:50%;
+    margin-left: -105px;
+  }
 }
